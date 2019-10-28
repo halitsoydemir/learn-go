@@ -7,7 +7,5 @@ func main() {
 	//_, _ = beginner.GetFullNameWithErrorDetail("halit", "soydemir")
 	//beginner.FuncVsMethod()
  	//beginner.TestCustomInterface()
- 	concurrency.TestWithAnonymousWaitGroup()
+ 	concurrency.WaitGroupSampleApi()
 }
-
-https://github.com/halitsoydemir/learn-go.git
