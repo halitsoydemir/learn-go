@@ -1,11 +1,13 @@
 package main
 
-import "learn-go/intermediate"
+import (
+	"learn-go/advanced"
+)
 
 func main() {
 	//beginner.GetFullName("halit","soydemir")
 	//_, _ = beginner.GetFullNameWithErrorDetail("halit", "soydemir")
 	//beginner.FuncVsMethod()
  	//beginner.TestCustomInterface()
-	intermediate.DecoratorWithRealWorldExample()
+	advanced.SocketExample()
 }

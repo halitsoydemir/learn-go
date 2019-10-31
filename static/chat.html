@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Go WebSocket Tutorial</title>
+</head>
+<body>
+<h2>Hello World</h2>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
+<script>
+    // const socket = io("http://localhost:5000/socket.io/chatRoom");
+    // socket.emit('messageReceived', JSON.stringify(someData), function(data){
+    //     console.log('ACK from server wtih data: ', data);
+    // });
+    // socket.on('messageReceived', function (msg, sendAckCb) {
+    //     sendAckCb(JSON.stringify(data)); // for example used serializing to JSON
+    // }
+    var socket = io();
+    // socket.emit('msg', 'hello');
+    var s2 = io("http://localhost:5000/chatRoom");
+    socket.on('messageReceived', function(msg){
+        console.log("mesage recieved : "+msg)
+        //$('#messages').append($('<li>').text(msg));
+    });
+    // $('form').submit(function(){
+    //     s2.emit('msg', $('#m').val(), function(data){
+    //         $('#messages').append($('<li>').text('ACK CALLBACK: ' + data));
+    //     });
+    //     socket.emit('notice', $('#m').val());
+    //     $('#m').val('');
+    //     return false;
+    // });
+</script>
+</body>
+</html>
